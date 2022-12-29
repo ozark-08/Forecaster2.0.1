@@ -74,3 +74,5 @@ console.log("id", id);
 //using different names for the properties
 const { name: personName } = obj;
 console.log("personName", personName);
+
+
