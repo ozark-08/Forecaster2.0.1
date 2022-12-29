@@ -1,0 +1,76 @@
+<div className="from-group">
+            <label htmlFor="password">Password</label>
+            <input
+              value={account.password}
+              onChange={this.handleChange}
+              name="password"
+              id="password"
+              type="text"
+              className="form-control"
+            />
+          </div>
+
+
+ when not using joi to validate. the validate method will have code as:
+validate = () => {
+ // const { account } = this.state;
+    // if (account.username.trim() === "")
+    //   errors.username = "Username is required";
+    // if (account.password.trim() === "")
+    //   errors.password = "Password is required";
+
+    //return the array of all the keys in the errors object. if the length is zero this implies no keys in the array, that is no errors => return null
+    //otherwise return => errors object
+    // return Object.keys(errors).length === 0 ? null : errors;   
+    }
+
+
+
+    when not using joi to validate property. the validateProperty method will have code as:
+    validateProperty = ({ name, value }) => {
+    // if (!error) return null;
+    // return error.details[0].message;
+
+    // if (name === "username") {
+    //   if (value.trim() === "") return "Username is required";
+    //   //...
+    // }
+    // if (name === "password") {
+    //   if (value.trim() === "") return "Password is required";
+    //   //...
+    // }
+    }
+
+
+    handleChange basic:
+    //   handleChange = (e) => {
+  //     const account = { ...this.state.account };
+  //     account[e.currentTarget.name] = e.currentTarget.value;
+  //     // account.username = e.currentTarget.value;
+  //     // account.password = e.currentTarget.value;
+  //     this.setState({ account: account });
+  //   };
+
+  if to use ref
+  // username = React.createRef();
+
+
+  //example of object destructring
+  const obj = {
+  name: "Fred",
+  age: 42,
+  id: 1
+}
+
+//simple destructuring
+const { name } = obj;
+console.log("name", name);
+
+//assigning multiple variables at one time
+const { age, id } = obj;
+console.log("age", age);
+console.log("id", id);
+
+//using different names for the properties
+const { name: personName } = obj;
+console.log("personName", personName);
